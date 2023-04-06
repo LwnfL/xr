@@ -21,6 +21,8 @@ export default class Controllers
         const onSelectStart = function(){
             audio.play();
         }
+        
+
         this.controller1.addEventListener( 'selectstart', onSelectStart );
         // this.controller1.addEventListener( 'selectend', onSelectEnd );
         this.scene.add( this.controller1 );
