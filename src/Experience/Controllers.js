@@ -22,6 +22,15 @@ export default class Controllers
             audio.play();
         }
         
+        //imported from https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads
+        this.controller1.addEventListener("gamepadconnected", (e) => {
+            const gp = navigator.getGamepads()[e.gamepad.index];
+            console.log(
+              `Gamepad connected at index ${gp.index}: ${gp.id} with ${gp.buttons.length} buttons, ${gp.axes.length} axes.`
+            );
+        });
+        // --- end -----
+
 
         this.controller1.addEventListener( 'selectstart', onSelectStart );
         // this.controller1.addEventListener( 'selectend', onSelectEnd );
