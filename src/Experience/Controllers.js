@@ -30,8 +30,10 @@ export default class Controllers
                 e.gamepad.id,
                 e.gamepad.buttons.length,
                 e.gamepad.axes.length
-              );
-        }
+                );
+            });
+        
+        console.log("test 1")
             
         // --- end -----
 
