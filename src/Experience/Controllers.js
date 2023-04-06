@@ -24,11 +24,15 @@ export default class Controllers
         
         //imported from https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads
         this.controller1.addEventListener("gamepadconnected", (e) => {
-            const gp = navigator.getGamepads()[e.gamepad.index];
             console.log(
-              `Gamepad connected at index ${gp.index}: ${gp.id} with ${gp.buttons.length} buttons, ${gp.axes.length} axes.`
-            );
-        });
+                "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+                e.gamepad.index,
+                e.gamepad.id,
+                e.gamepad.buttons.length,
+                e.gamepad.axes.length
+              );
+        }
+            
         // --- end -----
 
 
